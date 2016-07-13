@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test Prophet</title>
+</head>
+<body>
+	<script src="../asap.js"></script>
+	<script src="../prophet.js"></script>
+	<script>
+		var prophet = new Prophet(function(reality , drowsy){
+			console.log('sarting...');
+			setTimeout(function(){
+				console.log('running...');
+				reality({data:'this is a prophet'});
+			} , 3000);
+		}).dream(function(value){
+			console.log('ok: ' , value);
+		}).dream(function(value){
+			console.log('done');
+		});
+	</script>
+</body>
+</html>
